@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.练习一：实现一个加法计算器
+    function sum (num1, num2) {
+      // var result = num1 + num2; 
+      // return result;
+      return num1 + num2;
+    }
+
+    // 调用函数
+    var total = sum(20, 39);
+    console.log(total);
+
+    // 2.练习二：定义函数，传入宽高计算矩形的面积
+    // 矩形面积：宽度 * 高度
+    function calcRectArea (width, height) {
+      return width * height;
+    }
+
+    var area = calcRectArea(3, 8);
+    console.log(area);
+
+    // 3.练习三：定义函数，传入一个n，计算1~n数字之和
+    function calcNSum (n) {
+      var total = 0;
+      for (var i = 0; i <= n; i++) {
+        total += i;
+      }
+      return total;
+    }
+
+    var result = calcNSum(23);
+    console.log(result);
+
+    // 4.练习四：定义一个函数，传入一个数组，对数组进行反转
+    // var nums = [19, 38, 46, 2, 84, 92, 4];
+    // for (var i = 0; i < nums.length / 2; i++) {
+    //   var temp = nums[i];
+    //   nums[i] = nums[nums.length - 1 - i];
+    //   nums[nums.length - 1 - i] = temp;
+    // }
+
+    function reverseArray (arr) {
+      for (var i = 0; i < arr.length; i++) {
+        var temp = arr[i];
+        arr[i] = arr[arr.length - 1 - i];
+        arr[arr.length - 1 - i] = temp;
+      }
+      return arr;
+    }
+
+    var nums = [19, 38, 46, 2, 84, 92, 4];
+    nums = reverseArray(nums);
+    console.log(nums);
+
+    // 5.练习五：斐波那契数列
+    // 1.方式一：for循环
+    function fib (n) {
+      if (n === 0 || n === 1) {
+        return 1;
+      }
+      var num1 = 1;
+      var num2 = 1;
+      var sum = 2;
+      for (var i = 0; i < n; i++) {
+        num1 = num2;
+        num2 = sum;
+        sum = num1 + num2;
+
+      }
+      return sum;
+    }
+
+    console.log(fib(0));
+    console.log(fib(1));
+    console.log(fib(2));
+    console.log(fib(3));
+    console.log(fib(4));
+    console.log(fib(5));
+    console.log(fib(6));
+
+    // 方式二：递归调用方式
+    // 2.1.递归调用 -> 一个函数中可以调用另外一个函数
+    function test1 () {
+      console.log("test1被调用");
+      test2();
+    }
+    function test2 () {
+      console.log("test2被调用");
+    }
+
+    test1();
+
+    // 2.2.函数自己调用自己：递归调用
+    /*
+      在开发中尽量避免使用递归函数：
+      1.递归如果没有写好结束条件，意味着会无限调用
+      2.递归调用非常占据栈空间内存(空间复杂度)/效率比较低(时间复杂度)
+    */
+    // function test () {
+    //   console.log("test被调用");
+    //   test();
+    // }
+
+    // test();
+
+    // 2.3.使用递归调用实现斐波那契数列
+    function fib2 (n) {
+      if (n === 0 || n === 1) {
+        return 1;
+      }
+      return fib(n - 1) + fib(n - 2);
+    }
+
+    console.log(fib(6));
+
+  </script>
+</body>
+
+</html>

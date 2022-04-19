@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var age = 10;
+    var money = 10;
+    // 1.与运算：&& -> 两个条件同时满足
+    if (age >= 18 && money >= 5) {
+      console.log("开机");
+      console.log("上网");
+      console.log("玩游戏");
+    }
+    // 2.或运算：|| -> 满足一个条件
+    var profession = '网管';
+    var flag1 = age >= 18 && money >= 5;
+    var flag2 = profession == '网管';
+
+    if (flag1 || flag2) {
+      console.log("开机");
+      console.log("上网");
+      console.log("玩游戏");
+    }
+
+    // 3.取反运算：! -> 对之前的Boolean类型取反
+    var flag = false;
+    if (!flag) {
+      console.log("取反");
+    }
+
+    // 特别用法
+    var name = 'eju';
+    // 对象中存放的是键值对：key(键)：value(值)
+    var info = {
+      name: 'ehy',
+      age: 19,
+      height: 1.9,
+
+      eating: function () {
+        console.log('吃东西');
+      }
+    }
+
+    // 与运算的特殊用法：多个条件都为true，
+    // 短路与：有一个条件为false，那么后续不再判断
+    // 条件1 && 条件2 && 条件3
+    // console.log(info.eating());
+
+    // if (info.eating) {
+    //   info.eating()
+    // }
+
+    info.eating && info.eating();
+
+    console.log("----");
+
+    // 2.或运算的特殊用法：只要有一个条件为true
+    // 短路或：一旦遇到一个条件为true，那么后面的条件不在判断
+    //  条件1 || 条件2 || 条件3
+    var message = info.name || info.age || info.height;
+    console.log(message);
+
+  </script>
+</body>
+
+</html>

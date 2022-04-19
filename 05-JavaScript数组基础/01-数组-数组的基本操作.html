@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.好朋友的名字/
+    var name1 = 'knon1';
+    var name2 = 'knon2';
+    var name3 = 'knon3';
+    var names = ['knon1', 'knon2', 'knon3'];
+    console.log(names);
+
+    // 2.商品信息
+    var goods = [
+      { name: '苹果电脑', price: '￥19888', },
+      { name: '苹果电脑', price: '￥19888', },
+      { name: '苹果电脑', price: '￥19888', },
+      { name: '苹果电脑', price: '￥19888', },
+    ];
+    console.log(goods);
+
+    // 3.注意事项：在开发当中不要在一个数组中存放不同的数据类型
+    var info = ['whey', 19, false, ['nkd', 'jss']];
+    console.log(info);
+
+    // 4.获取数组的长度属性
+    console.log(info.length);
+
+    // 5.根据索引值获取数据
+    // 强调：如果传入不存在的索引值，返回的数据是undefined 
+    console.log(info[2]);
+    console.log(info[4]);
+    console.log(info[-2]);
+  </script>
+</body>
+
+</html>

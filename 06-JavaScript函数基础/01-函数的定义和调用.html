@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.如何定义一个函数
+    // function 函数名 () {
+    //   封装函数的代码
+    // }
+
+    function printInfo (a, b) {
+      var sum = a + b;
+      console.log(sum);
+    }
+
+    // 2.函数的调用
+    printInfo(10, 20);
+
+    // 3.参数的传递
+    function printInfo1 (name, age, height) {
+      console.log(name + ',' + age + ',' + height);
+    }
+
+    printInfo1('kono', 23, 1.98);
+    printInfo1('bodj', 22, 1.82);
+    printInfo1('boli', 29, 1.48);
+
+    // 4.练习：对某个人说say hello
+    function sayHello (name) {
+      console.log('hello' + name);
+      console.log('hello', name);
+    }
+
+    // 5.练习：为某个朋友唱生日歌
+    function singSong (name) {
+      console.log("happy birthday to you");
+      console.log("happy birthday to" + name);
+    }
+
+    sayHello('kobo');
+    singSong('lily');
+  </script>
+</body>
+
+</html>

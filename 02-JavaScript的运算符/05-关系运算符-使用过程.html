@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.定义变量
+    var num1 = 20;
+    var num2 = 6;
+
+    // 2.关系运算符 
+    // console.log(num1 == num2); // false
+    // console.log(num1 != num2); // true
+    // console.log(num1 > num2); // true
+    // console.log(num1 < num2); // false
+    // console.log(num1 >= num2); // true
+    // console.log(num1 <= num2); // false
+
+    // 3.全等和不等
+    // 3.1.== 比较：会进行隐式转换，再进行比较
+    var num3 = 123;
+    var num4 = '123';
+
+    // == 判断，隐式转换：将String转成Number
+    console.log(num3 == num4);
+
+    var flag1 = true;
+    var flag2 = "true";
+    // 隐式转换：都转成number再比较
+    // flag1 -> 1
+    // flag2 -> NaN
+    console.log(flag1 == flag2); // false
+
+    // 3.2.=== 全等：类型相等，数据相等(更多)
+    console.log(num3 === num4);
+
+    // != 比较：隐式转换 
+    // !== 比较：不会进行隐式转换 
+    console.log(num3 != num4);
+    console.log(num3 !== num4);
+  </script>
+</body>
+
+</html>

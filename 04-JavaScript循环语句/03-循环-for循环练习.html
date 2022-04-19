@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.案例一：while循环
+    var i = 0;
+    do {
+      console.log('hello');
+      i++;
+    } while (i < 10);
+
+    // 2.for循环的基本做法
+    for (var i = 0; i < 10; i++) {
+      console.log('hello');
+    }
+
+    // 3.练习一：打印0-99的数字
+    for (var i = 0; i < 100; i++) {
+      console.log(i);
+    }
+
+    // 4.练习二：❤三角形
+    // document.write('❤');
+    for (var i = 0; i < 6; i++) {
+      for (var j = 0; j < i; j++) {
+        document.write('❤');
+      }
+      document.write('<br/>');
+    }
+
+    document.write('<br/>');
+
+    // 练习三：❤矩形
+    for (var i = 0; i < 6; i++) {
+      for (var j = 0; j < 6; j++) {
+        document.write('❤');
+      }
+      document.write('<br/>');
+    }
+
+    // 练习四：九九乘法表
+    for (var i = 1; i < 10; i++) {
+      for (var j = 1; j <= i; j++) {
+        var str = j + "*" + i + "=" + i * j + "&nbsp;&nbsp;&nbsp;"
+        document.write(str);
+      }
+      document.write('<br/>');
+    }
+  </script>
+</body>
+
+</html>

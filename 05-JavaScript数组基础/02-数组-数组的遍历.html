@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.定义数组
+    var names = ['knon1', 'knon2', 'knon3'];
+
+    // 2.对数组遍历
+    for (var i = 0; i < names.length; i++) {
+      console.log(names[i]);
+    }
+
+    // 3.反向遍历
+    for (var j = names.length - 1; j >= 0; j--) {
+      console.log(names[j]);
+    }
+
+    // 4.将数组中所有的元素使用-进行分割
+    var message = '';
+    for (var t = 0; t < names.length; t++) {
+      message += names[t];
+      if (t !== names.length - 1) {
+        message += '-';
+      }
+    }
+    console.log(message);
+  </script>
+
+</body>
+
+</html>

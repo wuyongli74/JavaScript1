@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.死循环操作
+    // var age = 20;
+    // while (age >= 18) {
+    //   console.log("成年人");
+    // }
+
+    // 2.不希望出现死循环
+    var i = 0;
+    while (i < 10) {
+      console.log("hello world");
+      i++;
+    }
+
+    // 3.奇偶数
+    var i = 0;
+    var oddTotal = 0;
+    var evenTotal = 0;
+    while (i < 100) {
+      if (i % 2 !== 0) {
+        console.log('奇数', i);
+        oddTotal += i;
+      } else if (i !== 0) {
+        console.log('偶数', i);
+        evenTotal += i;
+      } else {
+        console.log('0');
+      }
+      i++;
+    }
+    console.log('所有奇数和为：', oddTotal);
+    console.log('所有偶数和为：', evenTotal);
+
+  </script>
+</body>
+
+</html>
